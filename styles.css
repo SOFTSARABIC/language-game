@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px; /* Default font size for the body */
+  text-align: center;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  margin-top: 50px;
+}
+
+#dice {
+  width: 120px; /* Increase the dice size */
+  height: 120px;
+  font-size: 32px; /* Larger font size for dice */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dice:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.dice:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#questionDisplay {
+  font-size: 24px; /* Larger font size for the question display */
+  margin-top: 20px;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#questionDisplay.show {
+  opacity: 1;
+}
+
+#questionDisplay.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+#timerContainer {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 5px;
+  height: 20px;
+  margin-top: 20px;
+  position: relative;
+}
+
+#timerProgress {
+  width: 100%;
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 1s linear;
+}
+
+#timerDisplay {
+  font-size: 20px; /* Increase font size for the timer */
+  margin-top: 20px;
+  text-align: center;
+}
+
+#restartTimerButton {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#restartTimerButton:hover {
+  background-color: #0056b3;
+}
